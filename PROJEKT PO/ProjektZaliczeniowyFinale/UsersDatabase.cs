@@ -77,7 +77,7 @@ namespace ProjektZaliczeniowyFinale
 
 
                     Console.WriteLine($"Zalogowano pomyślnie: {u.UserId} {u.Name} {u.Surname}");
-                    return u;
+                    return uDB._content.Find(x => x.UserId == u.UserId);//u
                 }
                 
                 Console.WriteLine("Błędne hasło");
